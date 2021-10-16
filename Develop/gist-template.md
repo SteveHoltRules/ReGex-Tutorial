@@ -1,10 +1,14 @@
-# Title (replace with your title)
+# Regex
 
 Introductory paragraph (replace this with your text)
+
+/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 
 ## Summary
 
 Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+
+Regular Expressions, known as regex, is a search tool that is used to comb through text to validate information. This can be a sentence to check for beginning a sentence with a capital letter and ending with punctuation, used for validating an email address, or used to validate a web address. This tool is available for use in many different programming languages.  
 
 ## Table of Contents
 
@@ -21,8 +25,11 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+In Regex, there are different components that are used to signify checks against certain sections of the text, these components and their uses are shown below. 
 
 ### Anchors
+Anchors signify a point to examine
+
 
 ### Quantifiers
 
