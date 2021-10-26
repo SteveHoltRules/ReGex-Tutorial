@@ -1,12 +1,12 @@
 # Regex
 
-/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
-
 ## Summary
 
 Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
 
-Regular Expressions, known as regex, is a search tool that is used to comb through text to validate information. This can be a sentence to check for beginning a sentence with a capital letter and ending with punctuation, used for validating an email address, or used to validate a web address. This tool is available for use in many different programming languages.  
+Regular Expressions, known as regex, is a search tool that is used to comb through text to validate information. This can be a sentence to check for beginning a sentence with a capital letter and ending with punctuation, used for validating an email address, or used to validate a web address. This tool is available for use in many different programming languages. The code that I will demostrate can be used to validate URL for matching syntax.
+
+/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@ In Regex, there are different components that are used to signify checks against
 
 ### Anchors
 Anchors signify a point to examine
-^ Signifies the beginning of the string that is undergoing evaluation. In the above example the ^(https signifies the beginning that is required at the beginning followed by the set code of https.
+^ Signifies the beginning of the string that is undergoing evaluation. In the above example the ^(https signifies the beginning that is required at the beginning followed by //.
 
 ### Quantifiers
 {2, 6} This section is meant to match between 2 and 6 of the preceding token. If it was {2,} it would be 2 or more {6} would be exactly 6.
@@ -53,13 +53,13 @@ When the unicode flag is enabled, you can use extended unicode escapes in the fo
 There are no flags in the example Regex example shown above. 
 
 ### Grouping and Capturing
-() Grouping is a method that is used to evaluate the string. The group string can run a match against the criteria in an order for compliance. 
+() Grouping is a method that is used to evaluate the string. The group string can run a match against the criteria in an order for compliance. The group capturing can be found by the parenthesis groupings. 
 
 ### Bracket Expressions
 []The bracket highlights a character set. There are multiple character sets within this Regex file that are shown within the brackets. 
 
 ### Greedy and Lazy Match
-b\w? Creates a match using a "b" - required, plus another (normal) charcater. () A Lazy match takes a preceding quantifier to match against as few characters as possible. By default quantifiers are greedy, meaning thaye will match as many characters as possible. 
++ Lazy matches allow certain characters to be matched with a preceding quantifier to match against as few characters as possible. By default quantifiers are greedy, meaning they will match as many characters as possible. Therefore, if the match is not told to be lazy, the validation will continue to be run across the remainder of the string even though the criteria has been matched already.
 
 ### Boundaries
 (\b) Sets the validation of the end of the word based on the value prior to the boundary. A boundary word position between a word character and a non-word character or position start and end of a string. (\B) Not word boundary, this will look the criteria that matches based on the position, so a @\B would mean that an s is required to be followed by another character. 
@@ -68,7 +68,7 @@ b\w? Creates a match using a "b" - required, plus another (normal) charcater. ()
 (?<name>ABC) creates a capturing group that can be referenced vai the specified name. This is used to match a pair of opening and closing tags that are passed in the string. In the beginning of the example statement, the :?/\ means that it is followed by. In the ? is also followed after the https. 
 
 ### Look-ahead and Look-behind
-These are also called look-arounds. Look-ahead and look-behinds match characters with a pass/fail return instead of a match of a part of the character set. 
+ ?! Look-Ahead ?= Look-Behind These are also called look-arounds. Look-ahead and look-behinds match characters with a pass/fail return instead of a match of a part of the character set. 
 
 ## Author
 
